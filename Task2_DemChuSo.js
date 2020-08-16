@@ -1,3 +1,6 @@
+// Run test https://playcode.io/
+// Xóa hết code mặc đinh paste để chạy
+
 var Input = ",,MLT1873";
 var KiTu = Chu = So = 0
 for(let i in Input)
