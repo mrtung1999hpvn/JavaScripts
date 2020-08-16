@@ -1,0 +1,13 @@
+// Tính giá trị của chuỗi
+// Charcode của a = 97  và giá trị của a = 1
+// Charcode của b = 98  và giá trị của b = 2
+// Charcode của c = 99  và giá trị của b = 3
+// …
+// Charcode của z = 122  và giá trị của b = 25
+const s = "AB".toLowerCase();
+let K=0
+for(let i in s)
+{
+    K = K+ parseInt(s[i].charCodeAt()-96)
+}
+console.log(K)
