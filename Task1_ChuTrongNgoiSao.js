@@ -1,3 +1,6 @@
+// Run test https://playcode.io/
+// Xóa hết code mặc đinh paste để chạy
+
 const input = "ABC"         // Input đầu vào
 let m = input.length + 4    // biến let = input.length + 4 (lấy độ dài của dòng giữa | biến string .length tính độ dài của chuỗi)
 console.log("*".repeat(m))  // "*".repeat(m)  ( "*".repeat(n)   lặp lại * string tương ứng với n lần )
