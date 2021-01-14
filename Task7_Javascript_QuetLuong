@@ -1,0 +1,13 @@
+const _date = new Date("Thu Jan 14 2021 23:10:00 GMT+0700 (Giờ Đông Dương)")
+const date = new Date() // Date hiện tại dập mã QR
+const KiemTraDiMuon = (dateNow,dateDefault)=>{
+    const DateNew = new Date()
+    console.log("Giờ muộn : " + (dateNow.getHours()-dateDefault.getHours()))
+    console.log("Phút muộn : " + (dateNow.getMinutes()-dateDefault.getMinutes()))
+    return date.getTime()-_date.getTime() > 0 ? true : false
+}
+const KiemTraDiRa = (dateNow,dateDefault)=>{
+    return date.getTime()-_date.getTime() > 0 ? false : true
+}
+console.log(KiemTraDiMuon(date,_date) ? "Đi muộn"  : "Đi sớm")
+console.log(KiemTraDiRa(date,_date) ? "Đi ra sai giờ"  : "Đi ra đúng giờ")
