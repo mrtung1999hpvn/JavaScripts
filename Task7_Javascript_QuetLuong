@@ -1,5 +1,6 @@
-const _date = new Date("Thu Jan 14 2021 23:10:00 GMT+0700 (Giờ Đông Dương)")
 const date = new Date() // Date hiện tại dập mã QR
+var strdate = String(date).split(' ')
+const _date = new Date(strdate[0]+" "+strdate[1]+" "+strdate[2]+" "+strdate[3]+" 23:10:00 GMT+0700 (Giờ Đông Dương)")
 const KiemTraDiMuon = (dateNow,dateDefault)=>{
     const DateNew = new Date()
     console.log("Giờ muộn : " + (dateNow.getHours()-dateDefault.getHours()))
