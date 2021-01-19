@@ -11,16 +11,21 @@ const data =
   }
 ]
 
-const MaLDT = (data)=>{
-  const Mang = []
-  let MAX = 0
-  data.map(
-    (x,index)=>
-    {
-      (index+1) === parseInt(x.ma_doi_tuong.match(/\d/g).join("")) ? '' : Mang.push(index+1)
-      MAX < parseInt(x.ma_doi_tuong.match(/\d/g).join("")) ? MAX = parseInt(x.ma_doi_tuong.match(/\d/g).join("")) : 0
-    }
-  )
-  return "LDT" + "0".repeat(4-(Mang.length > 0 ? Mang[0] : MAX+1).toString().length)+ (Mang.length > 0 ? Mang[0] : MAX+1)
-}
-console.log(MaLDT(data))
+const MaTK = (data)=>{
+	const Mang = []
+	if(data.length===0)
+	{
+		return "LDT0001"
+	}
+	else{
+		data.map(
+			(x)=>{
+				Mang.push(parseInt(x.ma_doi_tuong.match(/\d/g).join("")))
+			}
+		)
+		console.log(Mang)
+		Mang.sort(function(a, b){return b - a});
+		return "LDT" + "0".repeat(8-((Mang[0]+1).toString().length)) +(Mang[0]+1).toString()
+	}
+  }
+console.log(MaTK(data))
